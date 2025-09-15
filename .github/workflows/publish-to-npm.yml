@@ -4,13 +4,8 @@
 name: Publish NPM Package
 
 on:
-  push:
-    tags: 
-      - "*"
-
-permissions:
-  id-token: write # Required for OIDC
-  contents: read
+  release:
+    types: [created]
 
 jobs:
   publish:
