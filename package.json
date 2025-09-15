@@ -2,14 +2,14 @@
   "name": "top-animes",
   "version": "1.0.0",
   "description": "",
+  "author": "Fabio Kopacz",
+  "license": "ISC",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "npx tsc",
     "test": "jest"
   },
-  "author": "Fabio Kopacz",
-  "license": "ISC",
   "devDependencies": {
     "@babel/preset-typescript": "^7.27.1",
     "@types/jest": "^30.0.0",
