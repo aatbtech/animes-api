@@ -29,6 +29,10 @@ jobs:
         run: npm version $GITHUB_REF_NAME --no-git-tag-version
 
       - run: npm ci
+
+      - name: Show npm identity
+        run: npm whoami
+
       # - run: npm test  executa os testes
       - run: npm run build # constrói o projeto, se aplicável
       - run: npm publish --access public
