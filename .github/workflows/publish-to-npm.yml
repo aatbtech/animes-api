@@ -19,8 +19,8 @@ jobs:
           registry-url: "https://registry.npmjs.org/"
           # always-auth: true
 
-      - name: Set package.json version from GitHub release
-        run: npm version $GITHUB_REF_NAME --no-git-tag-version
+    # - name: Set package.json version from GitHub release
+    #  run: npm version $GITHUB_REF_NAME --no-git-tag-version
 
       - run: npm ci
 
