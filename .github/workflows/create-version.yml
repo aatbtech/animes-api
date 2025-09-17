@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.PAT }}
+          token: ${{ secrets.NPM_PUBLISH }}
 
       - name: Add release author
         run: |
@@ -38,5 +38,6 @@ jobs:
 
       - name: Create git tag
         run: git tag v${{ steps.version.outputs.CURRENT_VERSION }}
+
       - name: Push git tag
-        run: git push origin v${{ steps.version.outputs.CURRENT_VERSION }}
+        run: git push --follow-tags
